@@ -18,7 +18,7 @@ public class Film extends CinemaItem {
 	
 	@Override
 	public String toString() {
-		return super.getTitle() + " " + super.getYear() + super.getCountry()
-				+ super.getDirector() + super.getMusicDirector() + duration;
+		return super.getTitle() + " // " + super.getYear() + " // " + super.getCountry()
+				+ " // " + super.getDirector() + " // " + super.getMusicDirector() + " // " + duration;
 	}
 }
