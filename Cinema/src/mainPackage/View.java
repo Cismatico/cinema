@@ -10,6 +10,10 @@ public class View {
 		this.scan = new Scanner(System.in);
 		this.controller = controller;
 	}
+	
+	public void readAllData() {
+		controller.readAllData();
+	}
 
 	public void mainMenu() {
 		while (true) {
@@ -232,46 +236,39 @@ public class View {
 				}
 			} else {
 				System.out.println("What do you want to modify?");
-				System.out.println("1. Title");
-				System.out.println("2. Year");
-				System.out.println("3. Country");
-				System.out.println("4. Director");
-				System.out.println("5. Music director");
-				System.out.println("6. Duration");
+				System.out.println("1. Year");
+				System.out.println("2. Country");
+				System.out.println("3. Director");
+				System.out.println("4. Music director");
+				System.out.println("5. Duration");
 				System.out.println("0. Cancel");
 				String key2 = scan.nextLine();
 				switch (key2) {
 				case "1":
-					System.out.println("Write the new title:");
-					String newTitle = scan.nextLine();
-					controller.changeFilmTitle(title, newTitle);
-					changeMenu();
-					break;
-				case "2":
 					System.out.println("Write the new year:");
 					int newYear = Integer.parseInt(scan.nextLine());
 					controller.changeFilmYear(title, newYear);
 					changeMenu();
 					break;
-				case "3":
+				case "2":
 					System.out.println("Write the new country:");
 					String newCountry = scan.nextLine();
 					controller.changeFilmCountry(title, newCountry);
 					changeMenu();
 					break;
-				case "4":
+				case "3":
 					System.out.println("Write the new director:");
 					String newDirector = scan.nextLine();
 					controller.changeFilmDirector(title, newDirector);
 					changeMenu();
 					break;
-				case "5":
+				case "4":
 					System.out.println("Write the new music director:");
 					String newMusicDirector = scan.nextLine();
 					controller.changeFilmMusicDirector(title, newMusicDirector);
 					changeMenu();
 					break;
-				case "6":
+				case "5":
 					System.out.println("Write the new duration:");
 					int newDuration = Integer.parseInt(scan.nextLine());
 					controller.changeFilmDuration(title, newDuration);
